@@ -1,0 +1,29 @@
+# ------------------------------------------------------
+# SOC Triage Agent - Dépendances Python
+# ------------------------------------------------------
+
+# --- API & Serveur ---
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.34.0,<1.0.0
+
+# --- Validation des données ---
+pydantic>=2.10.0,<3.0.0
+pydantic-settings>=2.7.0,<3.0.0  # Alternative propre à python-dotenv pour la config
+
+# --- Orchestration Agent (LangGraph) ---
+langgraph>=0.2.0,<1.0.0
+langchain-core>=0.3.0,<1.0.0
+
+# --- Clients HTTP & OSINT ---
+requests>=2.32.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+
+# --- Machine Learning (Détection d'anomalies - Isolation Forest) ---
+scikit-learn>=1.6.0,<2.0.0
+
+# --- Dashboard Analyste ---
+streamlit>=1.41.0,<2.0.0
+streamlit-autorefresh
+# --- Utilitaires ---
+typing-extensions>=4.12.0,<5.0.0
+tenacity>=9.0.0,<10.0.0  # Pour gérer les retries en cas de timeout d'Ollama
